@@ -27,10 +27,10 @@ with final.pkgs.lib; let
   # }
   all-plugins = with pkgs.vimPlugins; [
     # plugins from nixpkgs go in here.
-    # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
+    https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
     nvim-treesitter.withAllGrammars
     luasnip # snippets | https://github.com/l3mon4d3/luasnip/
-    # nvim-cmp (autocompletion) and extensions
+    nvim-cmp (autocompletion) and extensions
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
     cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
     lspkind-nvim # vscode-like LSP pictograms | https://github.com/onsails/lspkind.nvim/
@@ -78,7 +78,7 @@ with final.pkgs.lib; let
     vim-repeat
     # ^ libraries that other plugins depend on
     # bleeding-edge plugins from flake inputs
-    # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
+    (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
     # ^ bleeding-edge plugins from flake inputs
     which-key-nvim
   ];
@@ -106,8 +106,8 @@ in {
   # files you would not like to include.
   #
   # For example:
-  #
-  # nvim-pkg-no-telescope = mkNeovim {
+  
+  #nvim-pkg-no-telescope = mkNeovim {
   #   plugins = [];
   #   ignoreConfigRegexes = [
   #     "^plugin/telescope.lua"
